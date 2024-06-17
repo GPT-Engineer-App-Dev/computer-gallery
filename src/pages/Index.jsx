@@ -1,17 +1,24 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, SimpleGrid, Image, Box, Heading } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container centerContent maxW="container.lg" py={10}>
+      <VStack spacing={8}>
+        <Heading as="h1" size="2xl">Welcome to the Computer Gallery</Heading>
+        <Text fontSize="lg" textAlign="center">
+          Explore our collection of modern and high-end computer setups. Whether you're looking for a professional desktop, a gaming laptop, or a cozy home office setup, we have something for everyone.
+        </Text>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+          <Box boxShadow="md" borderRadius="md" overflow="hidden">
+            <Image src="/images/computer1.jpg" alt="Modern Desktop Setup" />
+          </Box>
+          <Box boxShadow="md" borderRadius="md" overflow="hidden">
+            <Image src="/images/computer2.jpg" alt="Gaming Laptop" />
+          </Box>
+          <Box boxShadow="md" borderRadius="md" overflow="hidden">
+            <Image src="/images/computer3.jpg" alt="Home Office Setup" />
+          </Box>
+        </SimpleGrid>
       </VStack>
     </Container>
   );
